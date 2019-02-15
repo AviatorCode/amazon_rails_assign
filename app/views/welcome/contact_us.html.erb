@@ -1,0 +1,19 @@
+<h1>Welcome#contact_us</h1>
+<p>Find me in app/views/welcome/contact_us.html.erb</p>
+
+<%= form_tag("/prcess_contact") do %>
+<div>
+<%= label_tag(:full_name)%> <br>
+<%= text_field_tag(:full_name)%>
+</div>
+<div>
+<%= label_tag(:email)%>
+<%= text_field_tag(:email, nil, class:"magic-input")%> <br>
+</div>
+<input class="magic-input">
+<div>
+<%= label_tag(:message)%>
+<%= text_area_tag(:message, nil, cols: 60, rows: 5)%> <br>
+</div>
+<%= submit_tag("contact_us")%>
+<%end%>
